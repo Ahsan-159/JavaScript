@@ -11,42 +11,49 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>JavaScript</title>
+<style>
+  #gray{
+    height:100px;
+    width:100px;
+    background-color:gray;
+  }
+  #black{
+    height:100px;
+    width:100px;
+    background-color:black;
+  }
+  #red{
+    height:100px;
+    width:100px;
+    background-color:red;
+  }
+  #skyblue{
+    height:100px;
+    width:100px;
+    background-color:skyblue;
+  }
+</style>
 </head>
+
 
 <body>
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="card mb-5">
-          <div class="card-header bg-dark text-white" id="result">
-            <h4 id="title" class="text-center">Student Registration Form</h4>
-          </div>
           <div class="card-body">
-            <form action="">
-              <div class="form-group">
-                <label for="">Name:</label>
-                <input type="text" name="" id="nam" class="form-control">
-                <small id="msg" style="color:red"></small>
-              </div>
-            </form>
-            </div>
-            <div class="card-footer">
-              <button type="button" class="btn btn-dark float-right" onclick="check()">Submit</button> 
-            </div>
-          </div>
+          <span type="button" id="gray"></span>
+          <span type="button" id="black"></span> 
+          <span type="button" id="red"></span> 
+          <span type="button" id="skyblue"></span>    
         </div>
         </div>
       </div>
     </div>
   </div>
   <script>
-    function check(){
-      let a = document.getElementById('nam').value;
-      if(a=="" || a== null)
-      document.getElementById('msg').innerHTML = 'Please Enter Your Name';
-    else
-    alert(a);
-    };
+   const body = document.querySelector('body');
+   body.style.backgroundColor = 'red';
   </script>
     <script src="script.js"></script>
     <!-- Optional JavaScript -->
