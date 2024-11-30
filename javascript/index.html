@@ -25,12 +25,12 @@
   #red{
     height:100px;
     width:100px;
-    background-color:red;
+    background-color:darkred;
   }
-  #skyblue{
+  #darkblue{
     height:100px;
     width:100px;
-    background-color:skyblue;
+    background-color:darkblue;
   }
 </style>
 </head>
@@ -39,21 +39,24 @@
 <body>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-md-8 offset-md-2">
         <div class="card mb-5">
-          <div class="card-body">
-          <span type="button" id="gray"></span>
-          <span type="button" id="black"></span> 
-          <span type="button" id="red"></span> 
-          <span type="button" id="skyblue"></span>    
+          <div class="card-body text-center">
+            <h3><u>Click Any Color Box To Chnage Background Color</u></h3>
+          <span type="button" id= "gray" onclick="changeColor(this.id)"></span>
+          <span type="button" id= "black"  onclick="changeColor(this.id)"></span> 
+          <span type="button" id= "red"     onclick="changeColor(this.id)"></span> 
+          <span type="button" id= "darkblue"  onclick="changeColor(this.id)"></span>    
         </div>
         </div>
       </div>
     </div>
   </div>
   <script>
-   const body = document.querySelector('body');
-   body.style.backgroundColor = 'red';
+   function changeColor(a){
+   document.body.style.background = a;
+   }
+
   </script>
     <script src="script.js"></script>
     <!-- Optional JavaScript -->
